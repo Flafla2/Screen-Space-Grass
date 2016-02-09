@@ -1,7 +1,7 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2015
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Screen-Space-Grass.CSharp", "Screen-Space-Grass.CSharp.csproj", "{4E99B749-5040-4023-A25A-E6F93F4BE195}"
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{664FE627-26C2-E98C-69F4-50F31F04ED2D}") = "Screen-Space-Grass", "Assembly-CSharp.csproj", "{519D54F3-8208-565B-2A7F-FC3EDF041DC0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,12 +9,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4E99B749-5040-4023-A25A-E6F93F4BE195}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4E99B749-5040-4023-A25A-E6F93F4BE195}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4E99B749-5040-4023-A25A-E6F93F4BE195}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4E99B749-5040-4023-A25A-E6F93F4BE195}.Release|Any CPU.Build.0 = Release|Any CPU
+		{519D54F3-8208-565B-2A7F-FC3EDF041DC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{519D54F3-8208-565B-2A7F-FC3EDF041DC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{519D54F3-8208-565B-2A7F-FC3EDF041DC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{519D54F3-8208-565B-2A7F-FC3EDF041DC0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 EndGlobal

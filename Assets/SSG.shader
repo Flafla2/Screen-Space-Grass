@@ -78,7 +78,7 @@
 				if (isgreen) {
 					fixed4 color = fixed4(0, 0, 0, 0);
 
-					float2 p = i.wpos;
+					float2 p = dpos;
 
 					float d = blend(depth, 0, 500, 100, 500);
 					float dclose = blend(depth, 0, 20, 30, 1);
@@ -89,13 +89,14 @@
 					p.y += _Time.y * 0.004; // wind
 
 					float yoffset = frac(p.y * d) / d;
-					float2 uvoffset = i.wpos.xy - up_vec.xy * yoffset;
-#if UNITY_UV_STARTS_AT_TOP
-					float2 uvoffset_d = dpos.xy + up_vec.xy * yoffset;
-#else
-					float2 uvoffset_d = uvoffset;
-#endif
 
+					#if UNITY_UV_STARTS_AT_TOP
+					float2 uvoffset = i.wpos.xy + up_vec.xy * yoffset;
+					float2 uvoffset_d = dpos.xy - up_vec.xy * yoffset;
+					#else
+					float2 uvoffset = i.wpos.xy + up_vec.xy * yoffset;
+					float2 uvoffset_d = dpos.xy + up_vec.xy * yoffset;
+					#endif
 
 					color = tex2D(_MainTex, uvoffset);
 					float depth2 = LinearEyeDepth(tex2D(_CameraDepthTexture, uvoffset_d).r);
